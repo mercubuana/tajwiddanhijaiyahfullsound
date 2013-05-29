@@ -1,0 +1,41 @@
+/* The original jQuery Mobile values are included in comments 
+ * after each property.
+ */
+
+/* Reason: Not using back or other btn, want more room for Header */
+.ui-header .ui-title {
+	margin-right:20px;
+	margin-left:20px;
+}
+/* Original JQM: margin-left, margin-right: 90px
+ */
+
+/* Reason: Want more space vertically so not crunched at top */
+.ui-content { padding: 25px 15px; }
+/* Original JQM: .ui-content { padding: 15px; }
+ */
+
+/* Reason: Want Footer at bottom, always */
+.ui-page .ui-footer { position: absolute; bottom: 0px; left: 0px; }
+/* Original JQM: .ui-page .ui-footer { position: relative; }
+ */
+
+ @-webkit-keyframes pulse {
+ from {
+   opacity: 0.2;
+    // font-size: 100%;
+ }
+ to {
+   opacity: 1.0;
+    // font-size: 200%;
+ }
+}
+
+.pulse {
+  -webkit-animation-name: pulse;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-direction: alternate;
+    text-align: center;
+}

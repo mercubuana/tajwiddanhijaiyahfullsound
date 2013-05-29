@@ -1,0 +1,1614 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">  
+ 	<link rel="stylesheet" href="jquery.mobile/jquery.mobile-1.1.0.min.css" />
+ 	<link rel="stylesheet" href="jquery.mobile/iOS_style.min.css" />
+ 	<link rel="stylesheet" href="jquery.mobile/iOS_style.css" title="default" />
+ 	<link rel="stylesheet" href="index.css" />
+	<script src="jquery.mobile/jquery-1.7.2.min"></script>
+	<script src="jquery.mobile/jquery.mobile-1.1.0.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>
+	<script type="text/javascript" charset="utf-8" src="main.js"></script>
+				<script type="text/javascript">
+			document.addEventListener("deviceready", onDeviceReady, false);
+
+			function onDeviceReady(){
+    			document.addEventListener("backbutton", function(e){
+       					if($.mobile.activePage.is('#home')){
+           navigator.app.exitApp();
+       				}
+       					else {
+          			 navigator.app.backHistory()
+      				 }
+    					}, false);
+				}
+        			</script>
+	</head>
+  
+  <body>
+		<div data-role=page id=home data-dom-cache=true>
+<div data-role=content class="home">
+	<p style="text-align: center"> <input type="image" data-role="none" src=image/bismi.png /></p>
+    
+   <hr class="ornamental"/>
+  		<h3 align="center">Welcome to Tajwid dan Hijaiyah</h3>
+	<hr class="ornamental"/>
+   
+    
+    <ul data-role=listview data-inset=true>   
+      <li data-role=list-divider data-icon=arrow-d>
+        <a href=#>  Mad </a></li>
+      <li> <a href=win_tabi.html	> Mad Tabi'i </a></li>
+      <li> <a href=win_mutasil.html > Mad Wajib Muttasil </a></li>
+      <li> <a href=win_munfasil.html> Mad Ja'iz Munfasil </a></li>
+      <li> <a href=win_iwad.html	> Mad Iwad </a></li>
+      <li> <a href=win_badal.html	> Mad Badal </a></li>
+      <li> <a href=win_lisukun.html	> Mad Arid Lissukun </a></li>
+      <li> <a href=#mad	> Quiz Mad!!! </a></li>
+      
+      <li data-role=list-divider data-icon=arrow-d>
+        <a href=#> Qalqala </a></li>
+      <li> <a href=win_qal.html	> Pengertian Qalqala </a> </li>
+      <li> <a href=win_kub.html	> Qalqala Kubra </a></li>
+      <li> <a href=win_sug.html	> Qalqala Shugra </a></li>
+      <li> <a href=#kal			> Quiz Qalqala!!! </a></li>
+     
+      <li data-role=list-divider data-icon=arrow-d>
+        <a href=#> Nun mati Dan Tanwin </a>
+      <li> <a href=win_idhar.html	> Idhar </a></li>
+      <li> <a href=win_idgham.html	> Idghom Bigunnah </a></li>
+      <li> <a href=win_bila.html	> Idghom Bila Gunnah </a></li>
+      <li> <a href=win_ikfa.html	> Ikfa </a></li>
+      <li> <a href=win_iqlab.html	> Iqlab </a></li>
+      <li> <a href=#tanwin> Quiz Nun Mati dan Tanwin!!! </a></li>
+      
+      
+      <li data-role=list-divider data-icon=arrow-d>
+          <a href=#> Lam Jalalah </a></li>
+      <li> <a href=win_taf.html		> Tafkhim </a></li>
+      <li> <a href=win_tar.html		> Tarqiq </a></li>
+      <li> <a href=#lam> Quiz Lam Jalalah!!! </a></li>
+      
+      <li data-role=list-divider data-icon=arrow-d>
+        <a href=#> Mim Mati </a></li>
+      <li> <a href=win_saf.html		> Ikhfa Syafawi </a></li>
+      <li> <a href=win_mimi.html	> Idgham Mimi </a></li>
+      <li> <a href=win_syaf.html	> Idhar Syafawi </a></li>
+      <li> <a href=#mim> Quiz Mim Mati!!! </a></li>
+      
+      <li data-role=list-divider data-icon=arrow-d>
+          <a href=#> Latihan </a></li>
+      <li> <a href=#kuis> Latihan Soal </a></li>
+    </ul>
+    <br>
+  <strong>&nbsp;Belajar Hijaiyah</strong><a href="hijaiyah.html" data-role="button" data-mini="true" data-theme="d"> Yes </a>
+    <div class=ui-grid-a>
+      <div class=ui-block-a>
+        <a href=help.html data-role=button data-mini="true" data-icon="alert"> Help </a></div>
+      <div class=ui-block-b>
+        <a href=about.html data-role=button data-rel="dialog" data-mini="true" data-icon="info"> About </a></div>
+    </div>
+    <p style="text-align: center" id="copyright">&copy; 2012 Hasan Fathy</p>
+  </div>
+</div>	
+
+
+<div id=menu data-role="page">
+        <div data-role="header" >
+        <a href="hijaiyah.html" data-role=button data-icon=arrow-l>Home</a>
+            <h1>
+                Games
+            </h1>
+        </div>
+        <div data-role="content">
+            <div id="pic-choice" data-role="fieldcontain">
+                <fieldset data-role="controlgroup">
+                    <legend>
+                        Pilih Gambar:
+                    </legend>
+                    <input type="radio" name="pic-choice" id="pic-choice-1" value="contoh1.jpg"
+                    checked="checked" />
+                    <label for="pic-choice-1">
+                        <img width="32" src="contoh1.jpg" />
+                        Gambar 1
+                    </label>
+                    <input type="radio" name="pic-choice" id="pic-choice-2" value="contoh2.jpg"
+                    />
+                    <label for="pic-choice-2">
+                        <img width="32" src="contoh2.jpg" />
+                        Gambar 2
+                    </label>
+                    <input type="radio" name="pic-choice" id="pic-choice-3" value="contoh3.jpg"
+                    />
+                    <label for="pic-choice-3">
+                        <img width="32" src="contoh3.jpg" />
+                        Gambar 3
+                    </label>
+                </fieldset>
+            </div>
+            <div data-role="fieldcontain">
+                <label for="difficulty"  class="select ">Pilih Level:</label>
+                <select name="difficulty " id="difficulty">
+                    <option value="3">
+                        Mudah (9 Kotak)
+                    </option>
+                    <option value="4" >
+                        Sedang (16 Kotak)
+                    </option>
+                    <option value="5">
+                        Sulit (25 Kotak)
+                    </option>
+                    </select>
+            </div>
+            <a id="play-button" href="#game" data-role="button">Mulai!</a>
+        </div>
+    </div>
+
+    <!-- Game page -->
+    <div id="game" data-role="page" >
+        <div data-role="header" data-backbtn="false">
+            <h1>
+                Games
+            </h1>
+        </div>
+        <div data-role="content">
+            <div id="pic-frame">
+                <div id="pic-guide">
+                </div>
+            </div>
+            <a href="#menu" data-role="button">Main Menu</a>
+        </div>
+    </div>
+    
+    <!-- Well done popup page -->
+    <div id="well-done" data-role="page">
+        <div data-role="header" >
+            <h1>
+                Games - Berhasil!
+            </h1>
+        </div>
+        <div data-role="content">
+            <img id="well-done-image" width="280" height="280" />
+            <a href="#menu" data-role="button">Main Menu</a>
+        </div>
+    </div>
+    
+ <!-- Game Mad -->
+ <div data-role="page" id="mad" data-theme="c">
+
+  <div data-role="header">
+    <h1>Quiz 1</h1>
+  </div>
+  <div data-role="content">
+    <div data-role="fieldcontain">
+    <fieldset data-role="controlgroup">
+      <legend>Mad yang berarti terpisah adalah...</legend>
+           <input type="radio" name="mad" id="mada" value="a" />
+           <label for="mada">Iwad</label>
+           <input type="radio" name="mad" id="madb" value="b" />
+           <label for="madb">Jaiz Munfasil</label>
+           <input type="radio" name="mad" id="madc" value="c" />
+           <label for="madc">Badal</label>
+    </fieldset>
+</div>
+  </div>
+  <div data-role="footer" data-position=fixed >
+    <a id="madcheck" href="#" data-icon="arrow-r" onclick="checkmad();">Cek Jawaban</a>
+  </div>
+</div>
+
+  <div data-role="page" id="madcorrect" data-theme="e">
+  <div data-role="header">
+    <h1>Yeahh...</h1>
+  </div>
+  <div data-role="content">
+    <h1>Yap Benar!</h1>
+    <p>Mad Jaiz Munfasil adalah mad dengan arti terpisah</p>
+    <p>Click Next untuk melanjutkan...</p>
+  </div>
+<div data-role="footer" data-position=fixed >
+    <a href="#mad2" data-icon="arrow-r">Next</a>
+  </div></div>
+
+    <div data-role="page" id="madincorrect" data-theme="b">
+  <div data-role="header">
+    <h1>Oh no...</h1>
+  </div>
+  <div data-role="content">
+    <h1>Jawaban salah :(</h1>
+    <p>Mad Jaiz Munfasil adalah mad dengan arti terpisah</p>
+    <p>klik Next untuk melanjutkan.</p>
+  </div>
+<div data-role="footer" data-position=fixed >
+    <a href="#mad3" data-icon="arrow-r">Next</a>
+  </div></div>
+
+  <!-- Question 2 -->
+<div data-role="page" id="mad2" data-theme="c">
+
+  <div data-role="header">
+    <h1>Quiz 2</h1>
+  </div>
+  <div data-role="content">
+    <div data-role="fieldcontain">
+    <fieldset data-role="controlgroup">
+      <legend>Diantara Mad yang kalian baca mana yang merupaka Mad asli? </legend>
+           <input type="radio" name="mad2" id="mad2a" value="a" />
+           <label for="mad2a">Wajib Muttasil</label>
+           <input type="radio" name="mad2" id="mad2b" value="b" />
+           <label for="mad2b">Badal</label>
+           <input type="radio" name="mad2" id="mad2c" value="c" />
+           <label for="mad2c">Tabi'i</label>
+    </fieldset>
+</div>
+
+  </div>
+  <div data-role="footer" data-position=fixed >
+    <a id="mad2check" href="#" data-icon="arrow-r" onclick="checkmad2();">Cek Jawaban</a>
+  </div>
+</div>
+
+  <div data-role="page" id="mad2correct" data-theme="e">
+  <div data-role="header">
+    <h1>Yeahh Benar!</h1>
+  </div>
+  <div data-role="content">
+    <h1>Tepat Sekali!</h1>
+    <p>Mad Tabi'i adalah satu satunya Mad asli.</p>
+
+      <p>Klik next untuk melanjutkan.</p>
+  </div>
+  <div data-role="footer" data-position=fixed >
+    <a href="#mad3" data-icon="arrow-r">Next</a>
+  </div>
+</div>
+
+    <div data-role="page" id="mad2incorrect" data-theme="b">
+  <div data-role="header">
+    <h1>Ohhhh....</h1>
+  </div>
+  <div data-role="content">
+    <h1>Jawabannya salah...</h1>
+    <p>Mad Tabi'i adalah satu satunya Mad asli.</p>
+    <p>klik Next untuk melanjutkan...</p>
+  </div>
+  <div data-role="footer" data-position=fixed >
+    <a href="#mad3" data-icon="arrow-r">Next</a>
+  </div>
+</div>
+
+  <!-- Question 3 -->
+<div data-role="page" id="mad3" data-theme="c">
+  <div data-role="header">
+    <h1>Quiz 3</h1>
+  </div>
+  <div data-role="content">
+    <div data-role="fieldcontain">
+    <fieldset data-role="controlgroup">
+      <legend>Aridh Lissukun, berarti...</legend>
+           <input type="radio" name="mad3" id="mad3a" value="a" />
+           <label for="mad3a">Baru datang</label>
+           <input type="radio" name="mad3" id="mad3b" value="b" />
+           <label for="mad3b">Mengganti</label>
+           <input type="radio" name="mad3" id="mad3c" value="c" />
+           <label for="mad3c">Bersambung</label>
+    </fieldset>
+</div>
+
+  </div>
+  <div data-role="footer" data-position=fixed >
+    <a id="mad3check" href="#" data-icon="arrow-r" onclick="checkmad3();">Cek Jawaban</a>
+  </div>
+</div>
+
+  <div data-role="page" id="mad3correct" data-theme="e">
+  <div data-role="header">
+    <h1>Yeahh Benar!</h1>
+  </div><!-- /header -->
+  <div data-role="content">
+    <h1>Wow... Benar!</h1>
+    <p>Tepat sekali, Mad Aridh Lisukun berarti Mad yang baru datang.</p>
+      <p>Klik next untuk melanjutkan.</p>
+  </div>
+  <div data-role="footer" data-position=fixed >
+    <a href="#home" data-icon="arrow-r" onclick="alert('Cukup Segini Dulu ya :p !');">Next</a>
+  </div>
+</div>
+
+    <div data-role="page" id="mad3incorrect" data-theme="a">
+  <div data-role="header">
+    <h1>Hmmm....</h1>
+  </div>
+  <div data-role="content">
+    <h1>Sayang banget, salah jawabannya...</h1>
+    <p>Mad Aridh Lisukun berarti Mad yang baru datang.</p>
+    <p>klik Next untuk melanjutkan...</p>
+  </div>
+  <div data-role="footer" data-position=fixed >
+    <a href="#home" data-icon="arrow-r" onclick="alert('Cukup Segini Dulu ya :p !');">Next</a>
+  </div>
+</div>
+
+ <!-- Game Qalqala -->
+ <div data-role="page" id="kal" data-theme="c">
+  <div data-role="header">
+    <h1>Quiz 1</h1>
+  </div>
+  <div data-role="content">
+
+    <div data-role="fieldcontain">
+    <fieldset data-role="controlgroup">
+      <legend>Dibawah ini huruf qalqala yg benar adalah.... </legend>
+           <input type="radio" name="kal" id="kala" value="a" />
+           <label for="kala">Ba, kha, dal, tho, qaf</label>
+           <input type="radio" name="kal" id="kalb" value="b" />
+           <label for="kalb">Ba, ja, dal, tho, kaf</label>
+           <input type="radio" name="kal" id="kalc" value="c" />
+           <label for="kalc">Ba, kha, ja, dal, tho</label>
+    </fieldset>
+</div>
+
+  </div>
+  <div data-role="footer" data-position=fixed >
+    <a id="kalcheck" href="#" data-icon="arrow-r" onclick="checkkal();">Cek Jawaban</a>
+  </div>
+</div>
+
+  <div data-role="page" id="kalcorrect" data-theme="e">
+  <div data-role="header">
+    <h1>Yeahh...</h1>
+  </div>
+  <div data-role="content">
+    <h1>Yap Betul!</h1>
+    <p>Ba, kha, dal, tho, qaf adalah huruf huruf Qalqalah </p>
+    <p>Click Next untuk melanjutkan...</p>
+  </div>
+  <div data-role="footer" data-position=fixed >
+    <a href="#kal2" data-icon="arrow-r">Next</a>
+  </div>
+</div>
+
+    <div data-role="page" id="kalincorrect" data-theme="a">
+  <div data-role="header">
+    <h1>Oh no...</h1>
+  </div>
+  <div data-role="content">
+    <h1>Kurang Tepat :(</h1>
+    <p>Ba, kha, dal, tho, qaf adalah huruf huruf Qalqalah</p>
+    <p>klik Next untuk melanjutkan.</p>
+  </div>
+  <div data-role="footer" data-position=fixed >
+    <a href="#kal2" data-icon="arrow-r">Next</a>
+  </div>
+</div>
+
+  <!-- Question 2 -->
+<div data-role="page" id="kal2" data-theme="c">
+  <div data-role="header">
+    <h1>Quiz 2</h1>
+  </div>
+  <div data-role="content">
+
+    <div data-role="fieldcontain">
+    <fieldset data-role="controlgroup">
+      <legend>Cara membaca Qalqalah seperti apa ? </legend>
+           <input type="radio" name="kal2" id="kal2a" value="a" />
+           <label for="kal2a">Mendengung</label>
+           <input type="radio" name="kal2" id="kal2b" value="b" />
+           <label for="kal2b">Melengking</label>
+           <input type="radio" name="kal2" id="kal2c" value="c" />
+           <label for="kal2c">Memantul</label>
+    </fieldset>
+</div>
+
+  </div>
+  <div data-role="footer" data-position=fixed >
+    <a id="kal2check" href="#" data-icon="arrow-r" onclick="checkkal2();">Cek Jawaban</a>
+  </div>
+</div>
+
+  <div data-role="page" id="kal2correct" data-theme="e">
+  <div data-role="header">
+    <h1>Yeahh Benar!</h1>
+  </div>
+  <div data-role="content">
+    <h1>Tepat Sekali!</h1>
+    <p>Cara Membaca Qalqalah adalah dengan memantul.</p>
+
+      <p>Klik next untuk melanjutkan.</p>
+  </div>
+  <div data-role="footer" data-position=fixed >
+    <a href="#kal3" data-icon="arrow-r">Next</a>
+  </div>
+</div>
+
+
+    <div data-role="page" id="kal2incorrect" data-theme="a">
+  <div data-role="header">
+    <h1>Ohhhh....</h1>
+  </div>
+  <div data-role="content">
+    <h1>Baca Lagi deh...</h1>
+    <p>Cara Membaca Qalqalah adalah dengan memantul.</p>
+    <p>klik Next untuk melanjutkan...</p>
+  </div>
+  <div data-role="footer" data-position=fixed >
+    <a href="#kal3" data-icon="arrow-r">Next </a>
+  </div>
+</div>
+
+  <!-- Question 3 -->
+<div data-role="page" id="kal3" data-theme="c">
+  <div data-role="header">
+    <h1>Quiz 3</h1>
+  </div>
+
+  <div data-role="content">
+
+    <div data-role="fieldcontain">
+    <fieldset data-role="controlgroup">
+      <legend>Bacaan memantul yang terletak di tengah kalimat, disebut... </legend>
+           <input type="radio" name="kal3" id="kal3a" value="a" />
+           <label for="kal3a">Qalqalah Kubro</label>
+           <input type="radio" name="kal3" id="kal3b" value="b" />
+           <label for="kal3b">Qalqalah Shugra</label>
+           <input type="radio" name="kal3" id="kal3c" value="c" />
+           <label for="kal3c">Gak Tau Juga Yah...</label>
+    </fieldset>
+</div>
+
+  </div>
+  <div data-role="footer" data-position=fixed >
+    <a id="kal3check" href="#" data-icon="arrow-r" onclick="checkkal3();">Cek Jawaban</a>
+  </div>
+</div>
+
+  <div data-role="page" id="kal3correct" data-theme="e">
+  <div data-role="header">
+    <h1>Benar!</h1>
+  </div>
+  <div data-role="content">
+    <h1>Wow... Benar!</h1>
+    <p>Yap Qalqalah Shugra akan memantul pada tengah kalimat.</p>
+      <p>Klik next untuk melanjutkan.</p>
+  </div>
+  <div data-role="footer" data-position=fixed>
+    <a href="#home" data-icon="arrow-r" onclick="alert('Udah yah, segini dulu :p !');">Next</a>
+  </div>
+</div>
+
+    <div data-role="page" id="kal3incorrect" data-theme="a">
+  <div data-role="header">
+    <h1>Yahh...</h1>
+  </div>
+  <div data-role="content">
+    <h1>Kurang tepat jawabannya...</h1>
+    <p>Qalqalah Shugra akan emmantul pada tengah kalimat.</p>
+    <p>klik Next untuk melanjutkan...</p>
+  </div>
+  <div data-role="footer" data-position=fixed >
+    <a href="#home" data-icon="arrow-r" onclick="alert('Udah yah, segini dulu :p !');">Next</a>
+  </div>
+</div>
+
+<!-- Game Nun Mati dan Tanwin -->
+ <div data-role="page" id="tanwin" data-theme="c">
+
+  <div data-role="header">
+    <h1>Quiz 1</h1>
+  </div>
+
+  <div data-role="content">
+    <div data-role="fieldcontain">
+    <fieldset data-role="controlgroup">
+      <legend>Jika "Nun Mati" bertemu "Ba", hukumnya adalah... </legend>
+           <input type="radio" name="tanwin" id="tanwina" value="a" />
+           <label for="tanwina">Izhar</label>
+           <input type="radio" name="tanwin" id="tanwinb" value="b" />
+           <label for="tanwinb">Iqlab</label>
+           <input type="radio" name="tanwin" id="tanwinc" value="c" />
+           <label for="tanwinc">Ikfa</label>
+    </fieldset>
+</div>
+
+  </div>
+  <div data-role="footer" data-position=fixed >
+    <a id="tanwincheck" href="#" data-icon="arrow-r" onclick="checktanwin();">Cek Jawaban</a>
+  </div>
+</div>
+
+  <div data-role="page" id="tanwincorrect" data-theme="e">
+  <div data-role="header">
+    <h1>Yeahh...</h1>
+  </div>
+  <div data-role="content">
+    <h1>Yap Betul!</h1>
+    <p>Nun Mati bertemu Ba adalah Hukum Iqlab </p>
+    <p>Click Next untuk melanjutkan...</p>
+  </div>
+  <div data-role="footer" data-position=fixed >
+    <a href="#tanwin2" data-icon="arrow-r">Next</a>
+  </div>
+</div>
+
+    <div data-role="page" id="tanwinincorrect" data-theme="a">
+  <div data-role="header">
+    <h1>Oh no...</h1>
+  </div>
+  <div data-role="content">
+    <h1>Kurang Tepat :(</h1>
+    <p>Nun Mati bertemu Ba adalah Hukum Iqlab</p>
+    <p>klik Next untuk melanjutkan.</p>
+  </div>
+  <div data-role="footer" data-position=fixed >
+    <a href="#tanwin2" data-icon="arrow-r">Next</a>
+  </div>
+</div>
+
+  <!-- Question 2 -->
+<div data-role="page" id="tanwin2" data-theme="c">
+  <div data-role="header">
+    <h1>Quiz 2</h1>
+  </div>
+  <div data-role="content">
+    <div data-role="fieldcontain">
+    <fieldset data-role="controlgroup">
+      <legend>Izhar di baca dengan... </legend>
+           <input type="radio" name="tanwin2" id="tanwin2a" value="a" />
+           <label for="tanwin2a">Samar-Samar</label>
+           <input type="radio" name="tanwin2" id="tanwin2b" value="b" />
+           <label for="tanwin2b">Dengung</label>
+           <input type="radio" name="tanwin2" id="tanwin2c" value="c" />
+           <label for="tanwin2c">Jelas</label>
+    </fieldset>
+</div>
+
+  </div>
+  <div data-role="footer" data-position=fixed >
+    <a id="tanwin2check" href="#" data-icon="arrow-r" onclick="checktanwin2();">Cek Jawaban</a>
+  </div>
+</div>
+
+  <div data-role="page" id="tanwin2correct" data-theme="e">
+  <div data-role="header">
+    <h1>Yeahh!</h1>
+  </div>
+  <div data-role="content">
+    <h1>Tepat Sekali!</h1>
+    <p>Cara Membaca Idzhar Adalah Jelas.</p>
+
+      <p>Klik next untuk melanjutkan.</p>
+  </div>
+  <div data-role="footer" data-position=fixed >
+    <a href="#tanwin3" data-icon="arrow-r">Next </a>
+  </div>
+</div>
+
+    <div data-role="page" id="tanwin2incorrect" data-theme="a">
+  <div data-role="header">
+    <h1>Ohhhh....</h1>
+  </div>
+  <div data-role="content">
+    <h1>Baca Lagi deh...</h1>
+    <p>Cara Membaca Idzhar Adalah Jelas.</p>
+    <p>klik Next untuk melanjutkan...</p>
+  </div>
+  <div data-role="footer" data-position=fixed >
+    <a href="#tanwin3" data-icon="arrow-r">Next </a>
+  </div>
+</div>
+
+  <!-- Question 3 -->
+<div data-role="page" id="tanwin3" data-theme="c">
+  <div data-role="header">
+    <h1>Quiz 3</h1>
+  </div>
+
+  <div data-role="content">
+    <div data-role="fieldcontain">
+    <fieldset data-role="controlgroup">
+      <legend>Bila "Tanwin" bertemu huruf "Wau", maka akan dibaca... </legend>
+           <input type="radio" name="tanwin3" id="tanwin3a" value="a" />
+           <label for="tanwin3a">Jelas</label>
+           <input type="radio" name="tanwin3" id="tanwin3b" value="b" />
+           <label for="tanwin3b">Memantul</label>
+           <input type="radio" name="tanwin3" id="tanwin3c" value="c" />
+           <label for="tanwin3c">Melebur</label>
+    </fieldset>
+</div>
+
+  </div>
+  <div data-role="footer" data-position=fixed >
+    <a id="tanwin3check" href="#" data-icon="arrow-r" onclick="checktanwin3();">Cek Jawaban</a>
+  </div>
+</div>
+
+  <div data-role="page" id="tanwin3correct" data-theme="e">
+  <div data-role="header">
+    <h1>Benar!</h1>
+  </div>
+  <div data-role="content">
+    <h1>Wow... Benar!</h1>
+    <p>Yap Tanwin dan Wau akan dibaca melebur bila bertemu.</p>
+      <p>Klik next untuk melanjutkan.</p>
+  </div>
+  <div data-role="footer" data-position=fixed >
+    <a href="#home" data-icon="arrow-r" onclick="alert('Udah yah, segini dulu :p !');">Next</a>
+  </div>
+</div>
+
+    <div data-role="page" id="tanwin3incorrect" data-theme="a">
+  <div data-role="header">
+    <h1>Yahh...</h1>
+  </div>
+  <div data-role="content">
+    <h1>Kurang tepat jawabannya...</h1>
+    <p>Tanwin dan Wau akan dibaca melebur bila bertemu.</p>
+    <p>klik Next untuk melanjutkan...</p>
+  </div>
+  <div data-role="footer" data-position=fixed >
+    <a href="#home" data-icon="arrow-r" onclick="alert('Udah yah, segini dulu :p !');">Next</a>
+  </div>
+</div>
+
+<!-- Game Lam Jalalah -->
+ <div data-role="page" id="lam" data-theme="c">
+  <div data-role="header">
+    <h1>Quiz 1</h1>
+  </div>
+  <div data-role="content">
+   <div data-role="fieldcontain">
+    <fieldset data-role="controlgroup">
+      <legend>Lam Tarqiq artinya...  </legend>
+           <input type="radio" name="lam" id="lama" value="a" />
+           <label for="lama">Tipis</label>
+           <input type="radio" name="lam" id="lamb" value="b" />
+           <label for="lamb">Ringan</label>
+           <input type="radio" name="lam" id="lamc" value="c" />
+           <label for="lamc">Dua-duanya betul</label>
+    </fieldset>
+</div>
+
+  </div>
+  <div data-role="footer" data-position=fixed >
+    <a id="lamcheck" href="#" data-icon="arrow-r" onclick="checklam();">Cek Jawaban</a>
+  </div>
+</div>
+
+  <div data-role="page" id="lamcorrect" data-theme="e">
+  <div data-role="header">
+    <h1>Yeahh...</h1>
+  </div>
+  <div data-role="content">
+    <h1>Yap Betul!</h1>
+    <p>Tarqiq Berarti Tipis atau Ringan. </p>
+    <p>Click Next untuk melanjutkan...</p>
+  </div>
+  <div data-role="footer" data-position=fixed >
+    <a href="#lam2" data-icon="arrow-r">Next</a>
+  </div>
+</div>
+
+    <div data-role="page" id="lamincorrect" data-theme="a">
+  <div data-role="header">
+    <h1>Oh no...</h1>
+  </div>
+  <div data-role="content">
+    <h1>Kurang Tepat :(</h1>
+    <p>Tarqiq Berarti Tipis atau Ringan.</p>
+    <p>klik Next untuk melanjutkan.</p>
+  </div>
+  <div data-role="footer" data-position=fixed >
+    <a href="#lam2" data-icon="arrow-r">Next</a>
+  </div>
+</div>
+
+  <!-- Question 2 -->
+<div data-role="page" id="lam2" data-theme="c">
+
+  <div data-role="header">
+    <h1>Quiz 2</h1>
+  </div><!-- /header -->
+
+  <div data-role="content">
+
+    <div data-role="fieldcontain">
+    <fieldset data-role="controlgroup">
+      <legend>Lam Jallah yang di baca berat/tebal adalah.. </legend>
+           <input type="radio" name="lam2" id="lam2a" value="a" />
+           <label for="lam2a">Tarqiq</label>
+           <input type="radio" name="lam2" id="lam2b" value="b" />
+           <label for="lam2b">Tafkhim</label>
+           <input type="radio" name="lam2" id="lam2c" value="c" />
+           <label for="lam2c">Entahlah</label>
+
+    </fieldset>
+</div>
+
+  </div><!-- /content -->
+  <div data-role="footer" data-position=fixed >
+    <a id="lam2check" href="#" data-icon="arrow-r" onclick="checklam2();">Cek Jawaban</a>
+  </div><!-- /header -->
+</div><!-- /page -->
+
+  <div data-role="page" id="lam2correct" data-theme="e">
+  <div data-role="header">
+    <h1>Yeahh!</h1>
+  </div><!-- /header -->
+  <div data-role="content">
+    <h1>Tepat Sekali!</h1>
+    <p>Lam Tafkhim dibaca berat/tebal.</p>
+
+      <p>Klik next untuk melanjutkan.</p>
+  </div><!-- /content -->
+  <div data-role="footer" data-position=fixed >
+    <a href="#lam3" data-icon="arrow-r">Next </a>
+  </div><!-- /header -->
+</div><!-- /page -->
+
+    <div data-role="page" id="lam2incorrect" data-theme="a">
+  <div data-role="header">
+    <h1>Ohhhh....</h1>
+  </div><!-- /header -->
+  <div data-role="content">
+    <h1>Baca Lagi deh...</h1>
+    <p>Lam Tafkhim dibaca berat/tebal.</p>
+    <p>klik Next untuk melanjutkan...</p>
+  </div><!-- /content -->
+  <div data-role="footer" data-position=fixed >
+    <a href="#lam3" data-icon="arrow-r">Next </a>
+  </div><!-- /header -->
+</div><!-- /page -->
+
+  <!-- Question 3 -->
+<div data-role="page" id="lam3" data-theme="c">
+  <div data-role="header">
+    <h1>Quiz 3</h1>
+  </div><!-- /header -->
+
+  <div data-role="content">
+
+    <div data-role="fieldcontain">
+    <fieldset data-role="controlgroup">
+      <legend>Lam terjadi apabila sebelum huruf Lam Jalalah ada harakat kasrah (i) </legend>
+
+           <input type="radio" name="lam3" id="lam3a" value="a" />
+           <label for="lam3a">Tarqiq</label>
+           <input type="radio" name="lam3" id="lam3b" value="b" />
+           <label for="lam3b">Tafkhim</label>
+           <input type="radio" name="lam3" id="lam3c" value="c" />
+           <label for="lam3c">Taqrkhim</label>
+
+    </fieldset>
+</div>
+
+  </div><!-- /content -->
+  <div data-role="footer" data-position=fixed >
+    <a id="lam3check" href="#" data-icon="arrow-r" onclick="checklam3();">Cek Jawaban</a>
+  </div><!-- /header -->
+</div><!-- /page -->
+
+  <div data-role="page" id="lam3correct" data-theme="e">
+  <div data-role="header">
+    <h1>Benar!</h1>
+  </div><!-- /header -->
+  <div data-role="content">
+    <h1>Wow... Benar!</h1>
+    <p>Lam terjadi apabila sebelum huruf Lam Jalalah ada harakat kasrah (i) adalah Tarqiq</p>
+      <p>Klik next untuk melanjutkan.</p>
+  </div><!-- /content -->
+  <div data-role="footer" data-position=fixed >
+    <a href="#home" data-icon="arrow-r" onclick="alert('Udah yah, segini dulu :p !');">Next</a>
+  </div><!-- /header -->
+</div><!-- /page -->
+
+    <div data-role="page" id="lam3incorrect" data-theme="a">
+  <div data-role="header">
+    <h1>Yahh...</h1>
+  </div><!-- /header -->
+  <div data-role="content">
+    <h1>Kurang tepat jawabannya...</h1>
+    <p>klik Next untuk melanjutkan...</p>
+  </div><!-- /content -->
+  <div data-role="footer" data-position=fixed >
+    <a href="#home" data-icon="arrow-r" onclick="alert('Udah yah, segini dulu :p !');">Next</a>
+  </div><!-- /header -->
+</div><!-- /page -->
+
+
+<!-- Game Mim Mati -->
+ <div data-role="page" id="mim" data-theme="c">
+
+  <div data-role="header">
+    <h1>Quiz 1</h1>
+  </div><!-- /header -->
+
+  <div data-role="content">
+
+    <div data-role="fieldcontain">
+    <fieldset data-role="controlgroup">
+      <legend>Jumlah Hukum bacaan mim mati ada...  </legend>
+
+           <input type="radio" name="mim" id="mima" value="a" />
+           <label for="mima">2</label>
+           <input type="radio" name="mim" id="mimb" value="b" />
+           <label for="mimb">4</label>
+           <input type="radio" name="mim" id="mimc" value="c" />
+           <label for="mimc">3</label>
+
+    </fieldset>
+</div>
+
+  </div><!-- /content -->
+  <div data-role="footer" data-position=fixed >
+    <a id="mimcheck" href="#" data-icon="arrow-r" onclick="checkmim();">Cek Jawaban</a>
+  </div><!-- /header -->
+</div><!-- /page -->
+
+
+  <div data-role="page" id="mimcorrect" data-theme="e">
+  <div data-role="header">
+    <h1>Yeahh...</h1>
+  </div><!-- /header -->
+  <div data-role="content">
+    <h1>Yap Betul!</h1>
+    <p>Hukum bacaan mim Mati ada 3. </p>
+    <p>Click Next untuk melanjutkan...</p>
+  </div><!-- /content -->
+  <div data-role="footer" data-position=fixed >
+    <a href="#mim2" data-icon="arrow-r">Next</a>
+  </div><!-- /header -->
+</div><!-- /page -->
+
+
+    <div data-role="page" id="mimincorrect" data-theme="a">
+  <div data-role="header">
+    <h1>Oh no...</h1>
+  </div><!-- /header -->
+  <div data-role="content">
+    <h1>Kurang Tepat :(</h1>
+    <p>Hukum bacaan mim Mati ada 3. </p>
+    <p>klik Next untuk melanjutkan.</p>
+  </div><!-- /content -->
+  <div data-role="footer" data-position=fixed >
+    <a href="#mim2" data-icon="arrow-r">Next</a>
+  </div><!-- /header -->
+</div><!-- /page -->
+
+
+  <!-- Question 2 -->
+<div data-role="page" id="mim2" data-theme="c">
+
+  <div data-role="header">
+    <h1>Quiz 2</h1>
+  </div><!-- /header -->
+
+  <div data-role="content">
+    <div data-role="fieldcontain">
+    <fieldset data-role="controlgroup">
+      <legend>Nama Lain Idgham Mimi adalah.. </legend>
+
+           <input type="radio" name="mim2" id="mim2a" value="a" />
+           <label for="mim2a">Idgham Syafawi</label>
+           <input type="radio" name="mim2" id="mim2b" value="b" />
+           <label for="mim2b">Idgham Bigunnah</label>
+           <input type="radio" name="mim2" id="mim2c" value="c" />
+           <label for="mim2c">Idgham Mutamasilain</label>
+
+    </fieldset>
+</div>
+
+  </div><!-- /content -->
+  <div data-role="footer" data-position=fixed >
+    <a id="mim2check" href="#" data-icon="arrow-r" onclick="checkmim2();">Cek Jawaban</a>
+  </div><!-- /header -->
+</div><!-- /page -->
+
+  <div data-role="page" id="mim2correct" data-theme="e">
+  <div data-role="header">
+    <h1>Yeahh!</h1>
+  </div><!-- /header -->
+  <div data-role="content">
+    <h1>Tepat Sekali!</h1>
+    <p>Nama Lain Idgham Mimi adalah Mutamasilain</p>
+
+      <p>Klik next untuk melanjutkan.</p>
+  </div><!-- /content -->
+  <div data-role="footer" data-position=fixed >
+    <a href="#mim3" data-icon="arrow-r">Next </a>
+  </div><!-- /header -->
+</div><!-- /page -->
+
+    <div data-role="page" id="mim2incorrect" data-theme="a">
+  <div data-role="header">
+    <h1>Ohhhh....</h1>
+  </div><!-- /header -->
+  <div data-role="content">
+    <h1>Baca Lagi deh...</h1>
+    <p>Nama Lain Idgham Mimi adalah Mutamasilain</p>
+    <p>klik Next untuk melanjutkan...</p>
+  </div><!-- /content -->
+  <div data-role="footer" data-position=fixed >
+    <a href="#mim3" data-icon="arrow-r">Next </a>
+  </div><!-- /header -->
+</div><!-- /page -->
+
+
+  <!-- Question 3 -->
+<div data-role="page" id="mim3" data-theme="c">
+  <div data-role="header">
+    <h1>Quiz 3</h1>
+  </div><!-- /header -->
+
+  <div data-role="content">
+
+    <div data-role="fieldcontain">
+    <fieldset data-role="controlgroup">
+      <legend>Sebutan Lain dari Mim Mati adalah... </legend>
+
+           <input type="radio" name="mim3" id="mim3a" value="a" />
+           <label for="mim3a">Mim Waqof</label>
+           <input type="radio" name="mim3" id="mim3b" value="b" />
+           <label for="mim3b">Mim Sukun</label>
+           <input type="radio" name="mim3" id="mim3c" value="c" />
+           <label for="mim3c">Mim Fathah</label>
+
+    </fieldset>
+</div>
+
+  </div><!-- /content -->
+  <div data-role="footer" data-position=fixed >
+    <a id="mim3check" href="#" data-icon="arrow-r" onclick="checkmim3();">Cek Jawaban</a>
+  </div><!-- /header -->
+</div><!-- /page -->
+
+  <div data-role="page" id="mim3correct" data-theme="e">
+  <div data-role="header">
+    <h1>Benar!</h1>
+  </div><!-- /header -->
+  <div data-role="content">
+    <h1>Wow... Benar!</h1>
+    <p>Yap jawabannya benar Mim Waqof ...</p>
+      <p>Klik next untuk melanjutkan.</p>
+  </div><!-- /content -->
+  <div data-role="footer" data-position=fixed >
+    <a href="#home" data-icon="arrow-r" onclick="alert('Udah yah, segini dulu :p !');">Next</a>
+  </div><!-- /header -->
+</div><!-- /page -->
+
+
+    <div data-role="page" id="mim3incorrect" data-theme="a">
+  <div data-role="header">
+    <h1>Yahh...</h1>
+  </div><!-- /header -->
+  <div data-role="content">
+    <h1>Kurang tepat jawabannya...</h1>
+    <p>jawabannya benar Mim Waqof ...</p>
+    <p>klik Next untuk melanjutkan...</p>
+  </div><!-- /content -->
+  <div data-role="footer" data-position=fixed >
+    <a href="#home" data-icon="arrow-r" onclick="alert('Udah yah, segini dulu :p !');">Next</a>
+  </div><!-- /header -->
+</div><!-- /page -->
+
+
+<div data-role="page" id="kuis" data-theme="c">
+
+  <div data-role="header">
+    <h1>Quiz 1</h1>
+  </div><!-- /header -->
+
+  <div data-role="content">
+
+    <div data-role="fieldcontain">
+    <fieldset data-role="controlgroup">
+      <legend>Jika "Nun Mati" bertemu "Ba", hukumnya adalah... </legend>
+
+           <input type="radio" name="kuis" id="kuisa" value="a" />
+           <label for="kuisa">Izhar</label>
+           <input type="radio" name="kuis" id="kuisb" value="b" />
+           <label for="kuisb">Iqlab</label>
+           <input type="radio" name="kuis" id="kuisc" value="c" />
+           <label for="kuisc">Ikfa</label>
+
+    </fieldset>
+</div>
+
+  </div><!-- /content -->
+  <div data-role="footer" data-position=fixed >
+    <a id="kuischeck" href="#" data-icon="arrow-r" onclick="checkkuis();">Cek Jawaban</a>
+  </div><!-- /header -->
+</div><!-- /page -->
+
+
+  <div data-role="page" id="kuiscorrect" data-theme="e">
+  <div data-role="header">
+    <h1>Yeahh...</h1>
+  </div><!-- /header -->
+  <div data-role="content">
+    <h1>Yap Betul!</h1>
+    <p>Nun Mati bertemu Ba adalah Hukum Iqlab </p>
+    <p>Click Next untuk melanjutkan...</p>
+  </div><!-- /content -->
+  <div data-role="footer" data-position=fixed >
+    <a href="#kuis2" data-icon="arrow-r">Next</a>
+  </div><!-- /header -->
+</div><!-- /page -->
+
+
+    <div data-role="page" id="kuisincorrect" data-theme="a">
+  <div data-role="header">
+    <h1>Oh no...</h1>
+  </div><!-- /header -->
+  <div data-role="content">
+    <h1>Kurang Tepat :(</h1>
+    <strong>Nun Mati bertemu Ba adalah Hukum Iqlab</strong>
+    <p>klik Next untuk melanjutkan.</p>
+  </div><!-- /content -->
+  <div data-role="footer" data-position=fixed >
+    <a href="#kuis2" data-icon="arrow-r">Next</a>
+  </div><!-- /header -->
+</div><!-- /page -->
+
+
+  <!-- Question 2 -->
+<div data-role="page" id="kuis2" data-theme="c">
+  <div data-role="header">
+    <h1>Quiz 2</h1>
+  </div><!-- /header -->
+  <div data-role="content">
+    <div data-role="fieldcontain">
+    <fieldset data-role="controlgroup">
+      <legend>Berikut ini contoh bacaan izhar adalah . . . . </legend>
+
+           <input type="radio" name="kuis2" id="kuis2a" value="a" />
+           <label for="kuis2a"><img src="image/1.gif" /></label>
+           <input type="radio" name="kuis2" id="kuis2b" value="b" />
+           <label for="kuis2b"><img src="image/idh.gif" /></label>
+           <input type="radio" name="kuis2" id="kuis2c" value="c" />
+           <label for="kuis2c"><img src="image/3.gif" /></label>
+
+    </fieldset>
+</div>
+
+  </div><!-- /content -->
+  <div data-role="footer" data-position=fixed >
+    <a id="kuis2check" href="#" data-icon="arrow-r" onclick="checkkuis2();">Cek Jawaban</a>
+  </div><!-- /header -->
+</div><!-- /page -->
+
+  <div data-role="page" id="kuis2correct" data-theme="e">
+  <div data-role="header">
+    <h1>Yeahh!</h1>
+  </div><!-- /header -->
+  <div data-role="content">
+    <h1>Tepat Sekali!</h1>
+    <p>Jawaban B adalah yang paling tepat.</p>
+
+      <p>Klik next untuk melanjutkan.</p>
+  </div><!-- /content -->
+  <div data-role="footer" data-position=fixed >
+    <a href="#kuis3" data-icon="arrow-r">Next</a>
+  </div><!-- /header -->
+</div><!-- /page -->
+
+
+    <div data-role="page" id="kuis2incorrect" data-theme="a">
+  <div data-role="header">
+    <h1>Ohhhh....</h1>
+  </div><!-- /header -->
+  <div data-role="content">
+    <h1>Baca Lagi deh...</h1>
+    <strong>Jawaban B adalah yang paling tepat</strong>
+    <p>klik Next untuk melanjutkan...</p>
+  </div><!-- /content -->
+  <div data-role="footer" data-position=fixed >
+    <a href="#kuis3" data-icon="arrow-r">Next</a>
+  </div><!-- /header -->
+</div><!-- /page -->
+
+ <!-- Question 3 --->
+ <div data-role="page" id="kuis3" data-theme="c">
+
+  <div data-role="header">
+    <h1>Quiz 3</h1>
+  </div><!-- /header -->
+
+  <div data-role="content">
+
+    <div data-role="fieldcontain">
+    <fieldset data-role="controlgroup">
+      <legend><img src="image/untitled.gif" /> Ada berapa hukum bacaannya? </legend>
+
+           <input type="radio" name="kuis3" id="kuis3a" value="a" />
+           <label for="kuis3a">1 ikhfa, 2 idgham bigunnah</label>
+           <input type="radio" name="kuis3" id="kuis3b" value="b" />
+           <label for="kuis3b">2 ikhfa, 1 idgham bigunnah</label>
+           <input type="radio" name="kuis3" id="kuis3c" value="c" />
+           <label for="kuis3c">3 ikhfa, 2 iqlab</label>
+
+    </fieldset>
+</div>
+
+  </div><!-- /content -->
+  <div data-role="footer" data-position=fixed >
+    <a id="kuis3check" href="#" data-icon="arrow-r" onclick="checkkuis3();">Cek Jawaban</a>
+  </div><!-- /header -->
+</div><!-- /page -->
+
+
+  <div data-role="page" id="kuis3correct" data-theme="e">
+  <div data-role="header">
+    <h1>Yeahh...</h1>
+  </div><!-- /header -->
+  <div data-role="content">
+    <h1>Yap Betul!</h1>
+    <p>disana ada 2 ikhfa, 1 idgham bigunnah </p>
+    <p>Click Next untuk melanjutkan...</p>
+  </div><!-- /content -->
+  <div data-role="footer" data-position=fixed >
+    <a href="#kuis4" data-icon="arrow-r">Next</a>
+  </div><!-- /header -->
+</div><!-- /page -->
+
+
+    <div data-role="page" id="kuis3incorrect" data-theme="a">
+  <div data-role="header">
+    <h1>Oh no...</h1>
+  </div><!-- /header -->
+  <div data-role="content">
+    <h1>Kurang Tepat :(</h1>
+    <strong>2 ikhfa, 1 idgham bigunnah</strong>
+    <p>klik Next untuk melanjutkan.</p>
+  </div><!-- /content -->
+  <div data-role="footer" data-position=fixed >
+    <a href="#kuis4" data-icon="arrow-r">Next</a>
+  </div><!-- /header -->
+</div><!-- /page -->
+
+
+<!-- Question 4 -->
+<div data-role="page" id="kuis4" data-theme="c">
+
+  <div data-role="header">
+    <h1>Quiz 4</h1>
+  </div><!-- /header -->
+
+  <div data-role="content">
+
+    <div data-role="fieldcontain">
+    <fieldset data-role="controlgroup">
+      <legend>Mana yang di sebut idgham bilagunnah... </legend>
+
+           <input type="radio" name="kuis4" id="kuis4a" value="a" />
+           <label for="kuis4a"><img src="image/12.gif" /></label>
+           <input type="radio" name="kuis4" id="kuis4b" value="b" />
+           <label for="kuis4b"><img src="image/gam.gif" /></label>
+           <input type="radio" name="kuis4" id="kuis4c" value="c" />
+           <label for="kuis4c"><img src="image/123.gif" /></label>
+
+    </fieldset>
+</div>
+
+  </div><!-- /content -->
+  <div data-role="footer" data-position=fixed >
+    <a id="kuis4check" href="#" data-icon="arrow-r" onclick="checkkuis4();">Cek Jawaban</a>
+  </div><!-- /header -->
+</div><!-- /page -->
+
+
+  <div data-role="page" id="kuis4correct" data-theme="e">
+  <div data-role="header">
+    <h1>Yeahh...</h1>
+  </div><!-- /header -->
+  <div data-role="content">
+    <h1>Yap Betul!</h1>
+    <p>Gambar B adalah contoh dari idgham Bila Gunnah </p>
+    <p>Click Next untuk melanjutkan...</p>
+  </div><!-- /content -->
+  <div data-role="footer" data-position=fixed >
+    <a href="#kuis5" data-icon="arrow-r">Next</a>
+  </div><!-- /header -->
+</div><!-- /page -->
+
+
+    <div data-role="page" id="kuis4incorrect" data-theme="a">
+  <div data-role="header">
+    <h1>Oh no...</h1>
+  </div><!-- /header -->
+  <div data-role="content">
+    <h1>Kurang Tepat :( </h1>
+    Gambar B adalah contoh dari idgham Bila Gunnah
+    <p>klik Next untuk melanjutkan.</p>
+  </div><!-- /content -->
+  <div data-role="footer" data-position=fixed >
+    <a href="#kuis5" data-icon="arrow-r">Next</a>
+  </div><!-- /header -->
+</div><!-- /page -->
+
+ <!-- Question 5 -->
+  <div data-role="page" id="kuis5" data-theme="c">
+
+  <div data-role="header">
+    <h1>Quiz 5</h1>
+  </div><!-- /header -->
+
+  <div data-role="content">
+
+    <div data-role="fieldcontain">
+    <fieldset data-role="controlgroup">
+      <legend>Contoh Lam Jalalah Tarqiq... </legend>
+
+           <input type="radio" name="kuis5" id="kuis5a" value="a" />
+           <label for="kuis5a"><img src="image/tar.gif" /></label>
+           <input type="radio" name="kuis5" id="kuis5b" value="b" />
+           <label for="kuis5b"><img src="image/11.gif" /></label>
+           <input type="radio" name="kuis5" id="kuis5c" value="c" />
+           <label for="kuis5c"><img src="image/111.gif" /></label>
+
+    </fieldset>
+</div>
+
+  </div><!-- /content -->
+  <div data-role="footer" data-position=fixed >
+    <a id="kuis5check" href="#" data-icon="arrow-r" onclick="checkkuis5();">Cek Jawaban</a>
+  </div><!-- /header -->
+</div><!-- /page -->
+
+
+  <div data-role="page" id="kuis5correct" data-theme="e">
+  <div data-role="header">
+    <h1>Yeahh...</h1>
+  </div><!-- /header -->
+  <div data-role="content">
+    <h1>Yap Betul!</h1>
+    <p>Gambar A adalah contoh dari Tarqiq </p>
+    <p>Click Next untuk melanjutkan...</p>
+  </div><!-- /content -->
+  <div data-role="footer" data-position=fixed >
+    <a href="#kuis6" data-icon="arrow-r">Next</a>
+  </div><!-- /header -->
+</div><!-- /page -->
+
+
+    <div data-role="page" id="kuis5incorrect" data-theme="a">
+  <div data-role="header">
+    <h1>Oh no...</h1>
+  </div><!-- /header -->
+  <div data-role="content">
+    <h1>Kurang Tepat :(</h1>
+    <p>Gambar A adalah contoh dari Tarqiq </p>
+    <p>klik Next untuk melanjutkan.</p>
+  </div><!-- /content -->
+  <div data-role="footer" data-position=fixed >
+    <a href="#kuis6" data-icon="arrow-r">Next</a>
+  </div><!-- /header -->
+</div><!-- /page -->
+
+ <!-- Question 6 -->
+ <div data-role="page" id="kuis6" data-theme="c">
+
+  <div data-role="header">
+    <h1>Quiz 6</h1>
+  </div><!-- /header -->
+
+  <div data-role="content">
+
+    <div data-role="fieldcontain">
+    <fieldset data-role="controlgroup">
+      <legend>Apakah ini Mad Tabi'i <img src="image/tab.gif" />... </legend>
+
+           <input type="radio" name="kuis6" id="kuis6a" value="a" />
+           <label for="kuis6a">Ya</label>
+           <input type="radio" name="kuis6" id="kuis6b" value="b" />
+           <label for="kuis6b">Bukan</label>
+           <input type="radio" name="kuis6" id="kuis6c" value="c" />
+           <label for="kuis6c">Mungkin</label>
+
+    </fieldset>
+</div>
+
+  </div><!-- /content -->
+  <div data-role="footer" data-position=fixed >
+    <a id="kuis6check" href="#" data-icon="arrow-r" onclick="checkkuis6();">Cek Jawaban</a>
+  </div><!-- /header -->
+</div><!-- /page -->
+
+
+  <div data-role="page" id="kuis6correct" data-theme="e">
+  <div data-role="header">
+    <h1>Yeahh...</h1>
+  </div><!-- /header -->
+  <div data-role="content">
+    <h1>Yap Betul!</h1>
+    <p>Itu adalah Contoh dari Mad Tabi'i </p>
+    <p>Click Next untuk melanjutkan...</p>
+  </div><!-- /content -->
+  <div data-role="footer" data-position=fixed >
+    <a href="#kuis7" data-icon="arrow-r">Next</a>
+  </div><!-- /header -->
+</div><!-- /page -->
+
+
+    <div data-role="page" id="kuis6incorrect" data-theme="a">
+  <div data-role="header">
+    <h1>Oh no...</h1>
+  </div><!-- /header -->
+  <div data-role="content">
+    <h1>Kurang Tepat :(</h1>
+    <p>Itu adalah Contoh dari Mad Tabi'i</p>
+    <p>klik Next untuk melanjutkan.</p>
+  </div><!-- /content -->
+  <div data-role="footer" data-position=fixed >
+    <a href="#kuis7" data-icon="arrow-r">Next</a>
+  </div><!-- /header -->
+</div><!-- /page -->
+
+<!-- Question 7 -->
+<div data-role="page" id="kuis7" data-theme="c">
+
+  <div data-role="header">
+    <h1>Quiz 7</h1>
+  </div><!-- /header -->
+
+  <div data-role="content">
+
+    <div data-role="fieldcontain">
+    <fieldset data-role="controlgroup">
+      <legend><img src="image/saf.gif" /> Gambar disamping adalah...</legend>
+
+           <input type="radio" name="kuis7" id="kuis7a" value="a" />
+           <label for="kuis7a">Idgham Bigunnah</label>
+           <input type="radio" name="kuis7" id="kuis7b" value="b" />
+           <label for="kuis7b">Idgham Mimi</label>
+           <input type="radio" name="kuis7" id="kuis7c" value="c" />
+           <label for="kuis7c">Idgham Bila Gunnah</label>
+
+    </fieldset>
+</div>
+
+  </div><!-- /content -->
+  <div data-role="footer" data-position=fixed >
+    <a id="kuis7check" href="#" data-icon="arrow-r" onclick="checkkuis7();">Cek Jawaban</a>
+  </div><!-- /header -->
+</div><!-- /page -->
+
+
+  <div data-role="page" id="kuis7correct" data-theme="e">
+  <div data-role="header">
+    <h1>Yeahh...</h1>
+  </div><!-- /header -->
+  <div data-role="content">
+    <h1>Yap Betul!</h1>
+    <p>Gambar tadi adalah contoh dari Idgham Safawi </p>
+    <p>Click Next untuk melanjutkan...</p>
+  </div><!-- /content -->
+  <div data-role="footer" data-position=fixed >
+    <a href="#kuis8" data-icon="arrow-r">Next</a>
+  </div><!-- /header -->
+</div><!-- /page -->
+
+
+    <div data-role="page" id="kuis7incorrect" data-theme="a">
+  <div data-role="header">
+    <h1>Oh no...</h1>
+  </div><!-- /header -->
+  <div data-role="content">
+    <h1>Kurang Tepat :(</h1>
+    <p>contoh dari Idgham Safawi</p>
+    <p>klik Next untuk melanjutkan.</p>
+  </div><!-- /content -->
+  <div data-role="footer" data-position=fixed >
+    <a href="#kuis8" data-icon="arrow-r">Next</a>
+  </div><!-- /header -->
+</div><!-- /page -->
+
+<!-- Question 8 -->
+<div data-role="page" id="kuis8" data-theme="c">
+
+  <div data-role="header">
+    <h1>Quiz 8</h1>
+  </div><!-- /header -->
+
+  <div data-role="content">
+
+    <div data-role="fieldcontain">
+    <fieldset data-role="controlgroup">
+      <legend>Idgham mimi adalah pertemuan mim mati dengan huruf . . . . </legend>
+
+           <input type="radio" name="kuis8" id="kuis8a" value="a" />
+           <label for="kuis8a">Ba</label>
+           <input type="radio" name="kuis8" id="kuis8b" value="b" />
+           <label for="kuis8b">Mim</label>
+           <input type="radio" name="kuis8" id="kuis8c" value="c" />
+           <label for="kuis8c">Fa</label>
+
+    </fieldset>
+</div>
+
+  </div><!-- /content -->
+  <div data-role="footer" data-position=fixed >
+    <a id="kuis8check" href="#" data-icon="arrow-r" onclick="checkkuis8();">Cek Jawaban</a>
+  </div><!-- /header -->
+</div><!-- /page -->
+
+
+  <div data-role="page" id="kuis8correct" data-theme="e">
+  <div data-role="header">
+    <h1>Yeahh...</h1>
+  </div><!-- /header -->
+  <div data-role="content">
+    <h1>Yap Betul!</h1>
+    <p>Idgham Mimi adalah mim mati bertemu Mim </p>
+    <p>Click Next untuk melanjutkan...</p>
+  </div><!-- /content -->
+  <div data-role="footer" data-position=fixed >
+    <a href="#kuis9" data-icon="arrow-r">Next</a>
+  </div><!-- /header -->
+</div><!-- /page -->
+
+
+    <div data-role="page" id="kuis8incorrect" data-theme="a">
+  <div data-role="header">
+    <h1>Oh no...</h1>
+  </div><!-- /header -->
+  <div data-role="content">
+    <h1>Kurang Tepat :(</h1>
+    <p>Idgham Mimi adalah mim mati bertemu Mim </p>
+    <p>klik Next untuk melanjutkan.</p>
+  </div><!-- /content -->
+  <div data-role="footer" data-position=fixed >
+    <a href="#kuis9" data-icon="arrow-r">Next</a>
+  </div><!-- /header -->
+</div><!-- /page -->
+
+<!-- Question 9 -->
+ <div data-role="page" id="kuis9" data-theme="c">
+
+  <div data-role="header">
+    <h1>Quiz 9</h1>
+  </div><!-- /header -->
+
+  <div data-role="content">
+
+    <div data-role="fieldcontain">
+    <fieldset data-role="controlgroup">
+      <legend>Cara Membaca Izhar adalah... </legend>
+
+           <input type="radio" name="kuis9" id="kuis9a" value="a" />
+           <label for="kuis9a">Jelas</label>
+           <input type="radio" name="kuis9" id="kuis9b" value="b" />
+           <label for="kuis9b">Samar</label>
+           <input type="radio" name="kuis9" id="kuis9c" value="c" />
+           <label for="kuis9c">Mendengung</label>
+
+    </fieldset>
+</div>
+
+  </div><!-- /content -->
+  <div data-role="footer" data-position=fixed >
+    <a id="kuis9check" href="#" data-icon="arrow-r" onclick="checkkuis9();">Cek Jawaban</a>
+  </div><!-- /header -->
+</div><!-- /page -->
+
+
+  <div data-role="page" id="kuis9correct" data-theme="e">
+  <div data-role="header">
+    <h1>Yeahh...</h1>
+  </div><!-- /header -->
+  <div data-role="content">
+    <h1>Yap Betul!</h1>
+    <p>Cara Membaca Izhar dengan Jelas</p>
+    <p>Click Next untuk melanjutkan...</p>
+  </div><!-- /content -->
+  <div data-role="footer" data-position=fixed >
+    <a href="#kuis10" data-icon="arrow-r">Next</a>
+  </div><!-- /header -->
+</div><!-- /page -->
+
+
+    <div data-role="page" id="kuis9incorrect" data-theme="a">
+  <div data-role="header">
+    <h1>Oh no...</h1>
+  </div><!-- /header -->
+  <div data-role="content">
+    <h1>Kurang Tepat :(</h1>
+    <p>Cara Membaca Izhar dengan Jelas</p>
+    <p>klik Next untuk melanjutkan.</p>
+  </div><!-- /content -->
+  <div data-role="footer" data-position=fixed >
+    <a href="#kuis10" data-icon="arrow-r">Next</a>
+  </div><!-- /header -->
+</div><!-- /page -->
+
+
+  <!-- Question 10 -->
+<div data-role="page" id="kuis10" data-theme="c">
+  <div data-role="header">
+    <h1>Quiz 10</h1>
+  </div><!-- /header -->
+
+  <div data-role="content">
+
+    <div data-role="fieldcontain">
+    <fieldset data-role="controlgroup">
+      <legend>Bacaan memantul yang terletak di tengah kalimat, disebut... </legend>
+
+           <input type="radio" name="kuis10" id="kuis10a" value="a" />
+           <label for="kuis10a">Qalqalah Kubro</label>
+           <input type="radio" name="kuis10" id="kuis10b" value="b" />
+           <label for="kuis10b">Qalqalah Shugra</label>
+           <input type="radio" name="kuis10" id="kuis10c" value="c" />
+           <label for="kuis10c">Qalqalah Syafawi</label>
+
+    </fieldset>
+</div>
+
+  </div><!-- /content -->
+  <div data-role="footer" data-position=fixed >
+    <a id="kuis10check" href="#" data-icon="arrow-r" onclick="checkkuis10();">Cek Jawaban</a>
+  </div><!-- /header -->
+</div><!-- /page -->
+
+  <div data-role="page" id="kuis10correct" data-theme="e">
+  <div data-role="header">
+    <h1>Benar!</h1>
+  </div><!-- /header -->
+  <div data-role="content">
+    <h1>Wow... Benar!</h1>
+    <p>Yap Qalqalah Shugra akan emmantul pada tengah kalimat.</p>
+      <p>Klik next untuk melanjutkan.</p>
+  </div><!-- /content -->
+  <div data-role="footer" data-position=fixed >
+    <a href="#home" data-icon="arrow-r" onclick="alert('Udah yah, segini dulu :p !');">Next</a>
+  </div><!-- /header -->
+</div><!-- /page -->
+
+
+    <div data-role="page" id="kuis10incorrect" data-theme="a">
+  <div data-role="header">
+    <h1>Yahh...</h1>
+  </div><!-- /header -->
+  <div data-role="content">
+    <h1>Kurang tepat jawabannya...</h1>
+    <p>Qalqalah Shugra akan emmantul pada tengah kalimat.</p>
+    <p>klik Next untuk melanjutkan...</p>
+  </div><!-- /content -->
+  <div data-role="footer" data-position=fixed >
+    <a href="#home" data-icon="arrow-r" onclick="alert('Udah yah, segini dulu :p !');">Next</a>
+  </div><!-- /header -->
+</div><!-- /page -->
+ 
+  </body>
+</html>
+
+<script>
+
+$("li:not(:jqmData(role=list-divider))").hide ();
+
+$("li:jqmData(role=list-divider)").bind ("vclick", function (event)
+{
+  $(this).nextUntil ("li:jqmData(role=list-divider)").toggle ();
+  var $span = $(this).find ("span.ui-icon");
+  if ($span.hasClass ("ui-icon-arrow-d")) 
+  {
+    $span.removeClass ("ui-icon-arrow-d");
+    $span.addClass ("ui-icon-arrow-u");
+  }
+  else 
+  {
+    $span.removeClass ("ui-icon-arrow-u");
+    $span.addClass ("ui-icon-arrow-d");
+  }
+});
+
+</script>
+
+<script>
+$(document).one("mobileinit", function () {
+    $.mobile.pageContainer = $('#home');
+    $.mobile.defaultPageTransition = 'none';
+
+});
+</script>
